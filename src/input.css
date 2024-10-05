@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .menu-items-container {
+    @apply flex flex-col justify-around w-full gap-4 py-2;
+  }
+  .menu-list {
+    @apply flex flex-col gap-3;
+  }
+  .menu-item {
+    @apply flex items-center gap-3 justify-center md:justify-center lg:justify-start rounded px-3 py-2  hover:bg-[#1B2B65] hover:cursor-pointer;
+  }
+  .menu-item-with-icon {
+    @apply flex items-center justify-center md:justify-center lg:justify-between w-full rounded hover:bg-[#1B2B65] hover:cursor-pointer;
+  }
+}
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

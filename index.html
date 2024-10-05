@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
+    <script defer src="public/scripts/script.js"></script>
+    <script
+      defer
+      src="https://kit.fontawesome.com/985cabe830.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Dashboard</title>
+  </head>
+  <body class="flex flex-col h-screen md:flex-row lg:flex-row">
+    <!-- Hamburger menu for mobile and tablet views -->
+    <div
+      id="hamburger"
+      class="fixed z-50 cursor-pointer lg:hidden top-4 left-4"
+    >
+      <i class="fas fa-bars text-2xl text-[#081A51]"></i>
+    </div>
+
+    <!-- Begin Side Bar -->
+    <aside
+      id="sidebar"
+      class="bg-[#081A51] text-white w-full lg:w-72 flex flex-col items-center justify-center lg:justify-start transition-all duration-300 ease-in-out fixed lg:static top-0 left-0 h-screen -translate-x-full lg:translate-x-0 z-40"
+    >
+      <!-- Chevron for collapsed state -->
+      <div
+        id="sidebarToggle"
+        class="hidden lg:flex items-center justify-center absolute top-1/2 -right-4 w-8 h-8 bg-[#081A51] text-white rounded-full cursor-pointer transform -translate-y-1/2"
+      >
+        <i class="fas fa-chevron-right"></i>
+      </div>
+
+      <!-- Vertical "MENU" text -->
+      <div
+        id="menuText"
+        class="absolute hidden text-2xl font-bold tracking-widest text-white transition-opacity duration-300 transform -rotate-90 -translate-x-1/2 -translate-y-1/2 opacity-0 lg:block left-1/2 top-1/2"
+      >
+        MENU
+      </div>
+
+      <!-- Begin Nav Container -->
+      <nav
+        id="sidebarContent"
+        class="flex flex-col items-start justify-start w-full gap-2 px-5 overflow-y-scroll no-scrollbar"
+      >
+        <!-- Begin Menu Item  -->
+        <div class="menu-items-container">
+          <h1></h1>
+          <div class="menu-item">
+            <i class="fa-solid fa-face-meh-blank" style="color: #ffffff"></i>
+            <a class="capitalize" href="#">blank page</a>
+          </div>
+          <div class="menu-item-with-icon">
+            <div class="menu-item">
+              <i class="fa-brands fa-bootstrap" style="color: #ffffff"></i>
+              <a class="capitalize" href="#">bootstrap</a>
+            </div>
+            <i
+              class="fa-solid fa-chevron-right menu-chevron"
+              style="color: #ffffff"
+            ></i>
+          </div>
+        </div>
+        <!-- End Menu Item -->
+
+        <!-- Begin Menu Item  -->
+        <div class="menu-items-container">
+          <h1
+            class="text-[#41B6EB] text-center md:text-center lg:text-start uppercase tracking-tighter font-bold"
+          >
+            atrana
+          </h1>
+          <div>
+            <div class="group">
+              <div class="menu-item-with-icon" id="componentsToggle">
+                <div class="menu-item">
+                  <i class="fa-regular fa-clipboard" style="color: #ffffff"></i>
+                  <a class="capitalize" href="#">components</a>
+                </div>
+                <i
+                  class="fa-solid fa-chevron-right menu-chevron"
+                  style="color: #ffffff"
+                ></i>
+              </div>
+              <!-- Begin Dropdown Menu -->
+              <div
+                class="flex flex-col items-center justify-center w-full lg:pl-4"
+              >
+                <ul
+                  id="componentsDropdown"
+                  class="hidden overflow-hidden transition-all duration-300 ease-in-out max-h-0"
+                >
+                  <li class="menu-item">
+                    <i
+                      class="fa-regular fa-circle fa-2xs"
+                      style="color: #ffffff"
+                    ></i>
+                    <a class="capitalize" href="#">avatar</a>
+                  </li>
+                  <li class="menu-item">
+                    <i
+                      class="fa-regular fa-circle fa-2xs"
+                      style="color: #ffffff"
+                    ></i>
+                    <a class="capitalize" href="#">toastify</a>
+                  </li>
+                  <li class="menu-item">
+                    <i
+                      class="fa-regular fa-circle fa-2xs"
+                      style="color: #ffffff"
+                    ></i>
+                    <a class="capitalize" href="#">sweet alert</a>
+                  </li>
+                  <li class="menu-item">
+                    <i
+                      class="fa-regular fa-circle fa-2xs"
+                      style="color: #ffffff"
+                    ></i>
+                    <a class="capitalize" href="#">hero</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End Dropdown Menu -->
+            </div>
+          </div>
+
+          <div class="menu-item-with-icon">
+            <div class="menu-item">
+              <i class="fa-regular fa-clipboard" style="color: #ffffff"></i>
+              <a class="capitalize" href="#">forms</a>
+            </div>
+            <i
+              class="fa-solid fa-chevron-right menu-chevron"
+              style="color: #ffffff"
+            ></i>
+          </div>
+          <div class="menu-item-with-icon">
+            <div class="menu-item">
+              <i class="fa-solid fa-cubes" style="color: #ffffff"></i>
+              <a class="capitalize" href="#">widgets</a>
+            </div>
+            <i
+              class="fa-solid fa-chevron-right menu-chevron"
+              style="color: #ffffff"
+            ></i>
+          </div>
+          <div class="menu-item-with-icon">
+            <div class="menu-item">
+              <i class="fa-solid fa-chart-simple" style="color: #ffffff"></i>
+              <a class="capitalize" href="#">charts</a>
+            </div>
+            <i
+              class="fa-solid fa-chevron-right menu-chevron"
+              style="color: #ffffff"
+            ></i>
+          </div>
+          <div class="menu-item-with-icon">
+            <div class="menu-item">
+              <i class="fa-solid fa-cloud" style="color: #ffffff"></i>
+              <a class="capitalize" href="#">icons</a>
+            </div>
+            <i
+              class="fa-solid fa-chevron-right menu-chevron"
+              style="color: #ffffff"
+            ></i>
+          </div>
+        </div>
+        <!-- End Menu Item -->
+        <div class="menu-items-container">
+          <h1
+            class="text-[#41B6EB] text-center md:text-center lg:text-start uppercase tracking-tighter font-bold"
+          >
+            pages
+          </h1>
+          <div class="menu-item-with-icon">
+            <div class="menu-item">
+              <i class="fa-solid fa-user" style="color: #ffffff"></i>
+              <a class="capitalize" href="#">auth</a>
+            </div>
+            <i
+              class="fa-solid fa-chevron-right menu-chevron"
+              style="color: #ffffff"
+            ></i>
+          </div>
+
+          <div class="menu-item-with-icon">
+            <div class="menu-item">
+              <i
+                class="fa-solid fa-triangle-exclamation"
+                style="color: #ffffff"
+              ></i>
+              <a class="capitalize" href="#">error</a>
+            </div>
+            <i
+              class="fa-solid fa-chevron-right menu-chevron"
+              style="color: #ffffff"
+            ></i>
+          </div>
+
+          <div class="menu-item">
+            <i class="fa-solid fa-pen-ruler" style="color: #ffffff"></i>
+            <a class="capitalize" href="#">credit</a>
+          </div>
+          <!-- End Menu Item -->
+        </div>
+        <!-- End Nav Container -->
+      </nav>
+    </aside>
+    <!-- End Side Bar  -->
+    <!-- Begin Main -->
+    <main
+      class="w-full mx-auto p-2 bg-[#EBF3FF] lg:p-3 h-full grid grid-cols-1 md:grid-cols-2 grid-rows-[auto_auto_1fr_auto] gap-4 transition-all duration-300 ease-in-out"
+    >
+      <!-- Row 1: Dashboard title and Profile (spanning both columns) -->
+      <div
+        class="flex items-center justify-between col-span-1 mt-12 md:col-span-2 lg:mt-0"
+      >
+        <h1 class="font-bold text-[#25396F] text-2xl">Dashboard</h1>
+        <div class="flex items-center gap-6">
+          <i class="fa-solid fa-bell fa-xl"></i>
+          <img
+            class="w-10 h-10 rounded-full"
+            src="public/images/profile.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- Row 2: Cards Container (spanning both columns) -->
+      <div
+        class="grid grid-cols-1 col-span-1 gap-4 md:col-span-2 sm:grid-cols-2 lg:grid-cols-4"
+      >
+        <!-- Card 1 -->
+        <div class="flex items-center justify-between p-4 bg-white">
+          <img class="w-16 h-16" src="public/images/revenue.png" alt="" />
+          <div class="flex flex-col items-center justify-center">
+            <h3 class="text-slate-500">Revenue</h3>
+            <h3 class="font-bold text-[#25396F]">$65</h3>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="flex items-center justify-between p-4 bg-white">
+          <img class="w-16 h-16" src="public/images/order.png" alt="" />
+          <div class="flex flex-col items-center justify-center">
+            <h3 class="text-slate-500">Orders</h3>
+            <h3 class="font-bold text-[#25396F]">3000</h3>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="flex items-center justify-between p-4 bg-white">
+          <img class="w-16 h-16" src="public/images/trend.png" alt="" />
+          <div class="flex flex-col items-center justify-center">
+            <h3 class="text-slate-500">Sales</h3>
+            <h3 class="font-bold text-[#25396F]">5500</h3>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="flex items-center justify-between p-4 bg-white">
+          <img class="w-16 h-16" src="public/images/revenue.png" alt="" />
+          <div class="flex flex-col items-center justify-center">
+            <h3 class="text-slate-500">Employes</h3>
+            <h3 class="font-bold text-[#25396F]">256</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 3, Column 1: Chart Container -->
+      <div class="flex flex-col items-stretch gap-2 p-2 bg-white">
+        <div class="flex items-center justify-between h-fit">
+          <h2 class="font-bold text-[#25396F]">Average revenue</h2>
+          <h2 class="font-bold text-[#25396F]">20%</h2>
+        </div>
+        <div class="h-full">
+          <canvas id="myChart" class="w-full h-full"></canvas>
+        </div>
+      </div>
+
+      <!-- Row 3, Column 2: Profiles Container -->
+      <div class="p-4 bg-white">
+        <h2 class="font-bold text-[#25396F] mb-2">Recent Message</h2>
+        <div class="flex flex-col items-start justify-center gap-4">
+          <!-- Profile 1 -->
+          <div class="flex gap-5">
+            <img class="w-14 h-14" src="public/images/man.png" alt="" />
+            <div>
+              <h2 class="font-bold text-[#25396F]">Hank Schrader</h2>
+              <h4 class="text-sm text-slate-500">@johnducky</h4>
+            </div>
+          </div>
+          <!-- Profile 2 -->
+          <div class="flex gap-5">
+            <img class="w-14 h-14" src="public/images/man2.png" alt="" />
+            <div>
+              <h2 class="font-bold text-[#25396F]">Dean Winchester</h2>
+              <h4 class="text-sm text-slate-500">@imdean</h4>
+            </div>
+          </div>
+          <!-- Profile 3 -->
+          <div class="flex gap-5">
+            <img
+              class="w-14 h-14"
+              src="public/images/bussiness-man.png"
+              alt=""
+            />
+            <div>
+              <h2 class="font-bold text-[#25396F]">John Doe</h2>
+              <h4 class="text-sm text-slate-500">@Doejohn</h4>
+            </div>
+          </div>
+          <button
+            class="w-full rounded text-white py-3 capitalize bg-[#25396F]"
+          >
+            start conversation
+          </button>
+        </div>
+      </div>
+      <div class="col-span-1 gap-4 md:col-span-2">test</div>
+    </main>
+    <!-- End Main -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="public/scripts/chartScript.js"></script>
+  </body>
+</html>
